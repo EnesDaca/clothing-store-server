@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+import mysql from "mysql";
 
 const connection = mysql.createPool({
   host: "localhost",
@@ -9,6 +9,6 @@ const connection = mysql.createPool({
   multipleStatements: true,
 });
 
-module.exports = {
+export default {
   connection: connection,
 };

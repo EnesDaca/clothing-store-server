@@ -1,10 +1,11 @@
 import express from "express";
+import cors from "cors";
+import product from "./Routes/product"; // Import the product module with ESM syntax
+
 const app = express();
-const cors = require("cors");
 
 app.use(cors());
 
-const product = require("./Routes/product");
 app.use("/product/api/", product);
 
 app.use("/", express.static("Uploads"));

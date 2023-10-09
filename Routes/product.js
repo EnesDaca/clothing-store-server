@@ -1,6 +1,7 @@
 import express from "express";
+import database from "../Database"; // Assuming you have an export from "../Database" with ESM syntax
+
 const product = express();
-const database = require("../Database");
 
 product.get("/getCategories", (req, res) => {
   let appData = {
@@ -16,13 +17,13 @@ product.get("/getCategories", (req, res) => {
       connection.query("SELECT * FROM categories", (error, rows) => {
         if (error) {
           appData.isError = true;
-          appData.data = error; // Change from err to error here
+          appData.data = error;
           res.status(500).json(appData);
         } else {
           appData.data = rows;
           res.status(200).json(appData);
         }
-        connection.release(); // Release the connection when done
+        connection.release();
       });
     }
   });
@@ -42,16 +43,16 @@ product.get("/getProducts", (req, res) => {
       connection.query("SELECT * from products", (error, rows) => {
         if (error) {
           appData.isError = true;
-          appData.data = error; // Change from err to error here
+          appData.data = error;
           res.status(500).json(appData);
         } else {
           appData.data = rows;
           res.status(200).json(appData);
         }
-        connection.release(); // Release the connection when done
+        connection.release();
       });
     }
   });
 });
 
-module.exports = product;
+export default product; // Export the product module with ESM syntax
