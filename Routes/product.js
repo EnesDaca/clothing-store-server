@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const product = express();
 const database = require("../Database");
 
