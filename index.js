@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-const cors = require("cors");
+import cors from "cors";
 const bodyparser = require("body-parser");
 
 app.use(bodyparser.json({ extended: true }));
