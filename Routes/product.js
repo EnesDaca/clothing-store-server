@@ -1,6 +1,6 @@
 import express from "express";
 const product = express();
-import database from "../Database";
+import database from "../Database/index.js";
 
 product.get("/getCategories", (req, res) => {
   let appData = {
