@@ -1,14 +1,12 @@
-import mysql from "mysql";
+const mysql = require("mysql");
 
 const connection = mysql.createPool({
   host: "localhost",
   user: "root",
-  password: "tehnicar33",
-  database: "clothingstore",
+  password: "sasa@123",
+  database: "estore",
   port: 3306,
   multipleStatements: true,
 });
 
-export default {
-  connection: connection,
-};
+module.exports.connection = connection;
