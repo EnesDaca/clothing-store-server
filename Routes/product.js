@@ -1,6 +1,7 @@
 import { connection } from "../Database/index.js";
 
-const express = require("express");
+import express from "express";
+
 const product = express();
 
 product.get("/getCategories", (req, res) => {
