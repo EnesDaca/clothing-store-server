@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import product from "./Routes/product"; // Import the product module with ESM syntax
+import product from "./Routes/product";
 
 const app = express();
 
