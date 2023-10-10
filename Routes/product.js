@@ -1,13 +1,14 @@
-import express from "express";
+import { connection } from "../Database/index.js";
+
+const express = require("express");
 const product = express();
-import database from "../Database/index.js";
 
 product.get("/getCategories", (req, res) => {
   let appData = {
     isError: false,
     data: [],
   };
-  database.connection.getConnection((err, connection) => {
+  connection.getConnection((err, connection) => {
     if (err) {
       appData.isError = true;
       appData.data = err;
@@ -33,7 +34,7 @@ product.get("/getProducts", (req, res) => {
     isError: false,
     data: [],
   };
-  database.connection.getConnection((err, connection) => {
+  connection.getConnection((err, connection) => {
     if (err) {
       appData.isError = true;
       appData.data = err;

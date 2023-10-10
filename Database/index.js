@@ -1,6 +1,6 @@
 import mysql from "mysql";
 
-const connection = mysql.createPool({
+export const connection = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "tehnicar33",
@@ -8,5 +8,3 @@ const connection = mysql.createPool({
   port: 3306,
   multipleStatements: true,
 });
-
-module.exports.connection = connection;
