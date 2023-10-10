@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 const product = express();
-const database = require("../Database");
+import database from "../Database";
 
 product.get("/getCategories", (req, res) => {
   let appData = {
@@ -54,4 +54,4 @@ product.get("/getProducts", (req, res) => {
   });
 });
 
-module.exports = product;
+export default product;

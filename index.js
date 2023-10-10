@@ -1,17 +1,15 @@
 import express from "express";
-const app = express();
 import cors from "cors";
 import bodyparser from "body-parser";
+import product from "./Routes/product";
+
+const app = express();
 
 app.use(bodyparser.json({ extended: true }));
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(cors());
 
-const product = require("./Routes/product");
 app.use("/product/api/", product);
-
-const payment = require("./Routes/payment");
-app.use("/api", payment);
 
 app.use("/", express.static("Uploads"));
 
