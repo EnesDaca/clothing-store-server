@@ -1,5 +1,5 @@
 import express from "express";
-import database from "../Database"; // Assuming you have an export from "../Database" with ESM syntax
+import database from "../Database/index"; // Assuming you have an export from "../Database" with ESM syntax
 
 const product = express();
 
