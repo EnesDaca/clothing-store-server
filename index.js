@@ -1,7 +1,7 @@
 import express from "express";
 const app = express();
 import cors from "cors";
-const bodyparser = require("body-parser");
+import bodyparser from "body-parser";
 
 app.use(bodyparser.json({ extended: true }));
 app.use(bodyparser.urlencoded({ extended: false }));
