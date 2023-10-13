@@ -5,6 +5,6 @@ export const connection = mysql.createPool({
   user: "id21395682_daca",
   password: "Tehnicar33=",
   database: "id21395682_dacamysq",
-  // port: 3307,
+  port: 21,
   multipleStatements: true,
 });
