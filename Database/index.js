@@ -2,9 +2,9 @@ import mysql from "mysql";
 
 export const connection = mysql.createPool({
   host: "localhost",
-  user: "id21395682_daca",
-  password: "Tehnicar33=",
-  database: "id21395682_dacamysq",
-  //port:31,
+  user: "ukfn6xu5scedqpvz",
+  password: "zWRl2Pu92nyN9vxFDx8i",
+  database: "bqhhodkotc4lrxmm00ou",
+  port: 3306,
   multipleStatements: true,
 });
