@@ -1,15 +1,10 @@
 import mysql from "mysql";
 
 export const connection = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "tehnicar33",
-  database: "clothingstore",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
   port: 3306,
   multipleStatements: true,
 });
-
-// DB_HOST = localhost
-// DB_USERNAME = root
-// DB_PASSWORD = tehnicar33
-// DB_NAME= clothingstore
